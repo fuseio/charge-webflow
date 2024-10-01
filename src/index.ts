@@ -12,6 +12,8 @@ function animateNavbarDesktop() {
   let hideTimeout: number | null = null;
 
   function showNavItem(navItem: HTMLElement) {
+    if (!navItem) return;
+
     if (hideTimeout) {
       clearTimeout(hideTimeout);
       hideTimeout = null;
